@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
   // 直接在JS中设置配置，不再使用外部JSON
   const config = {
-    progress: 75,
+    progress: 25,
     timeNodes: {
-      "0": "2023-05-01",
-      "25": "2023-06-15",
-      "50": "2023-08-01",
-      "75": "2023-10-15",
-      "100": ""
+      "0": "",
+      "25": "5月18日",
+      "50": "6月",
+      "75": "未知",
+      "100": "未知"
     },
-    announcement: "暂无公告" // 这里可以修改公告内容
+    announcement: "MCguesser现已上线，立即体验：https://mcguesser.071400.xyz/" // 这里可以修改公告内容
   };
 
   setTimeout(() => {
