@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAguesser - 蔚蓝档案角色猜谜游戏</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">BAguesser</div>
+            <nav class="nav">
+                <a href="https://start.071400.xyz/" class="nav-link">起始页</a>
+                <a href="https://home.071400.xyz/" class="nav-link">主页</a>
+                <a href="https://071400.xyz/" class="nav-link">博客</a>
+                <a href="https://071400.xyz/2025/06/baguesser/" class="nav-link">使用说明</a>
+                <a href="https://space.bilibili.com/515626972/" class="nav-link">B站</a>
+                <a href="https://game.071400.xyz/" class="nav-link">大厅</a>
+            </nav>
+        </header>
+        
+        <main class="game-area">
+            <!-- 模式选择 -->
+            <div id="mode-selection" class="mode-selection">
+                <h2>请选择游戏模式</h2>
+                <div class="modes">
+                    <div id="normal-mode" class="mode">
+                        <h3>常规模式</h3>
+                        <p>你有6次机会猜出正确的角色</p>
+                        <div class="best-score">最佳成绩: <span id="normal-best">--</span>秒</div>
+                    </div>
+                    <div id="infinite-mode" class="mode">
+                        <h3>无限模式</h3>
+                        <p>无限次尝试，看看你需要多少次才能猜对</p>
+                        <div class="best-score">最佳成绩: <span id="infinite-best">--</span>次</div>
+                    </div>
+                </div>
+                
+                <!-- 游戏介绍 -->
+                <div class="game-intro">
+                    <h3 class="intro-title">如何游玩？</h3>
+                    <p class="intro-text">
+                        在上方选择一个模式，你需要猜一个蔚蓝档案游戏学生，当一个词条猜对时该词条显示<span class="text-green">绿色</span>，错误时是<span class="text-gray">灰色</span>，其中学院和社团合并，猜出正确的社团或学院任意一个显<span class="text-yellow">黄色</span>，全对才是<span class="text-green">绿色</span>，直到猜出具体人物为止，你可以放弃，更多详情请点击导航栏的使用说明（测试阶段，你可以在后台直接看到答案）
+                    </p>
+                </div>
+            </div>
+            
+            <div class="game-play" id="game-play" style="display: none;">
+                <div class="game-header">
+                    <h2 id="game-mode-title">常规模式</h2>
+                    <div class="attempts" id="attempts">剩余尝试: 6</div>
+                    <button class="give-up-btn" id="give-up-btn">放弃</button>
+                </div>
+                
+                <div class="search-area">
+                    <input type="text" id="character-search" placeholder="输入角色名称或点击此处查看列表...">
+                    <div class="character-list" id="character-list"></div>
+                </div>
+                
+                <div class="guesses" id="guesses"></div>
+                
+                <div class="result-area" id="result-area" style="display: none;">
+                    <div class="result-message" id="result-message"></div>
+                    <div class="result-buttons">
+                        <button id="play-again-btn">再来一局</button>
+                        <a id="return-to-menu-btn" class="return-btn">返回选择</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <div class="modal" id="confirm-modal">
+        <div class="modal-content">
+            <p>确定要放弃当前游戏吗？</p>
+            <div class="modal-buttons">
+                <button id="confirm-give-up">确定</button>
+                <button id="cancel-give-up">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
