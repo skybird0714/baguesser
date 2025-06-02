@@ -2309,6 +2309,10 @@ const giveUpBtn = document.getElementById('give-up-btn');
 const confirmModal = document.getElementById('confirm-modal');
 const confirmGiveUpBtn = document.getElementById('confirm-give-up');
 const cancelGiveUpBtn = document.getElementById('cancel-give-up');
+const resetBestScoreBtn = document.getElementById('reset-best-score');
+const resetScoreModal = document.getElementById('reset-score-modal');
+const confirmResetBtn = document.getElementById('confirm-reset');
+const cancelResetBtn = document.getElementById('cancel-reset');
 
 // 初始化游戏
 function init() {
@@ -2352,6 +2356,20 @@ function init() {
     cancelGiveUpBtn.addEventListener('click', function() {
         hideGiveUpConfirmation();
     });
+    
+    // 添加重置最佳成绩按钮事件
+    resetBestScoreBtn.addEventListener('click', function() {
+        showResetScoreConfirmation();
+    });
+    
+    confirmResetBtn.addEventListener('click', function() {
+        resetBestScores();
+        hideResetScoreConfirmation();
+    });
+    
+    cancelResetBtn.addEventListener('click', function() {
+        hideResetScoreConfirmation();
+    });
 }
 
 // 加载最佳成绩
@@ -2361,6 +2379,23 @@ function loadBestScores() {
     
     document.getElementById('normal-best').textContent = normalBest;
     document.getElementById('infinite-best').textContent = infiniteBest;
+}
+
+// 重置最佳成绩
+function resetBestScores() {
+    localStorage.removeItem(STORAGE_KEYS.normalBest);
+    localStorage.removeItem(STORAGE_KEYS.infiniteBest);
+    loadBestScores();
+}
+
+// 显示重置成绩确认框
+function showResetScoreConfirmation() {
+    resetScoreModal.style.display = 'flex';
+}
+
+// 隐藏重置成绩确认框
+function hideResetScoreConfirmation() {
+    resetScoreModal.style.display = 'none';
 }
 
 // 保存最佳成绩
@@ -2421,7 +2456,7 @@ function returnToMenu() {
         gamePlay.classList.remove('fade-out');
         
         // 显示模式选择并添加淡入动画
-        modeSelection.style.display = 'block';
+        modeSelection.style.display = 'flex'; // 修改为flex以修复布局问题
         modeSelection.classList.add('fade-in');
         setTimeout(() => {
             modeSelection.classList.remove('fade-in');
@@ -2848,6 +2883,9 @@ function giveUp() {
     // 显示结果消息
     resultMessage.textContent = `已放弃！正确答案是：${gameState.targetCharacter.name}`;
     
+    // 将结果区域插入到猜测列表的顶部
+    guessesContainer.insertBefore(resultArea, guessesContainer.firstChild);
+    
     // 确保结果区域显示
     resultArea.style.display = 'block';
     
@@ -2856,6 +2894,9 @@ function giveUp() {
     setTimeout(() => {
         resultArea.classList.remove('fade-in');
     }, 500);
+    
+    // 滚动到顶部确保结果可见
+    guessesContainer.scrollTop = 0;
 }
 
 // 初始化游戏

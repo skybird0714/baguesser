@@ -101,6 +101,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 50px;
+    flex-wrap: wrap; /* 允许在小屏幕上换行 */
 }
 
 .mode {
@@ -111,6 +112,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* 添加底部间距，防止在换行时模式太靠近 */
 }
 
 .mode:hover {
@@ -146,6 +148,8 @@ body {
     align-items: center;
     margin-bottom: 25px;
     flex-shrink: 0; /* 防止头部压缩 */
+    flex-wrap: wrap; /* 允许在小屏幕上换行 */
+    gap: 10px; /* 元素间间距 */
 }
 
 .game-header h2 {
@@ -294,6 +298,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 25px;
+    flex-wrap: wrap; /* 允许在小屏幕上换行 */
 }
 
 #play-again-btn, .return-btn {
@@ -302,6 +307,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 16px;
+    margin-bottom: 10px; /* 添加底部间距，防止在换行时按钮太靠近 */
 }
 
 #play-again-btn {
@@ -357,6 +363,7 @@ body {
     justify-content: center;
     gap: 20px;
     margin-top: 25px;
+    flex-wrap: wrap; /* 允许在小屏幕上换行 */
 }
 
 .modal-buttons button {
@@ -366,6 +373,7 @@ body {
     border: none;
     transition: all 0.3s ease;
     font-size: 15px;
+    margin-bottom: 10px; /* 添加底部间距，防止在换行时按钮太靠近 */
 }
 
 #confirm-give-up {
@@ -383,6 +391,25 @@ body {
 }
 
 #cancel-give-up:hover {
+    background: rgba(210, 210, 220, 0.9);
+}
+
+/* 确认重置按钮样式 */
+#confirm-reset {
+    background: rgba(220, 80, 80, 0.8);
+    color: white;
+}
+
+#confirm-reset:hover {
+    background: rgba(230, 90, 90, 0.9);
+}
+
+#cancel-reset {
+    background: rgba(200, 200, 210, 0.8);
+    color: #333;
+}
+
+#cancel-reset:hover {
     background: rgba(210, 210, 220, 0.9);
 }
 
@@ -441,6 +468,24 @@ body {
     background: rgba(180, 180, 180, 0.8);
     cursor: not-allowed;
     opacity: 0.7;
+}
+
+/* 重置最佳成绩按钮 */
+.reset-score-btn {
+    margin-top: 20px;
+    background: rgba(200, 200, 210, 0.8);
+    color: #333;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.reset-score-btn:hover {
+    background: rgba(210, 210, 220, 0.9);
+    transform: translateY(-2px);
 }
 
 /* 过渡动画 */
@@ -592,4 +637,138 @@ body {
 .text-gray {
     color: #888;
     font-weight: bold;
+}
+
+/* 响应式布局 - 适配手机和小屏幕设备 */
+@media (max-width: 1200px) {
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+    
+    .nav {
+        gap: 15px;
+    }
+    
+    .game-area {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .guess-item {
+        grid-template-columns: 80px repeat(3, 1fr); /* 4列布局：头像 + 3个属性 */
+        grid-auto-flow: row;
+        grid-auto-rows: auto;
+    }
+    
+    .guess-avatar {
+        grid-row: span 3; /* 头像占据3行 */
+    }
+    
+    .nav {
+        gap: 10px;
+    }
+    
+    .nav-link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+        overflow-y: auto;
+        height: auto;
+        padding: 20px 0;
+    }
+    
+    .container {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .game-area {
+        padding: 20px;
+        overflow-y: auto;
+    }
+    
+    .mode {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .guess-item {
+        grid-template-columns: 70px repeat(2, 1fr); /* 3列布局：头像 + 2个属性 */
+    }
+    
+    .guess-avatar {
+        grid-row: span 5; /* 头像占据5行 */
+    }
+    
+    .guess-avatar img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .modal-content {
+        width: 90%;
+        max-width: 350px;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .game-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .guess-item {
+        grid-template-columns: 60px 1fr; /* 2列布局：头像 + 1个属性 */
+        padding: 15px;
+    }
+    
+    .guess-avatar {
+        grid-row: span 9; /* 头像占据9行 */
+    }
+    
+    .guess-avatar img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .property-label {
+        font-size: 11px;
+    }
+    
+    .property-value {
+        font-size: 12px;
+    }
+    
+    .game-intro {
+        padding: 20px;
+    }
+    
+    .intro-title {
+        font-size: 20px;
+    }
+    
+    .intro-text {
+        font-size: 14px;
+    }
 } 

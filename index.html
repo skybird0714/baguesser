@@ -38,6 +38,9 @@
                     </div>
                 </div>
                 
+                <!-- 重置最佳成绩按钮 -->
+                <button id="reset-best-score" class="reset-score-btn">重置最佳成绩</button>
+                
                 <!-- 游戏介绍 -->
                 <div class="game-intro">
                     <h3 class="intro-title">如何游玩？</h3>
@@ -72,12 +75,24 @@
         </main>
     </div>
     
+    <!-- 放弃确认框 -->
     <div class="modal" id="confirm-modal">
         <div class="modal-content">
             <p>确定要放弃当前游戏吗？</p>
             <div class="modal-buttons">
                 <button id="confirm-give-up">确定</button>
                 <button id="cancel-give-up">取消</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 重置成绩确认框 -->
+    <div class="modal" id="reset-score-modal">
+        <div class="modal-content">
+            <p>确定要重置所有最佳成绩记录吗？</p>
+            <div class="modal-buttons">
+                <button id="confirm-reset">确定</button>
+                <button id="cancel-reset">取消</button>
             </div>
         </div>
     </div>
