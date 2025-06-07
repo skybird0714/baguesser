@@ -297,7 +297,7 @@ const charactersData = {
       "name": "大野 月咏",
       "intro_link": "https://kivo.wiki/data/character/32",
       "avatar_url": "https://static.kivo.wiki/images/students/大野%20月咏/avatar.png",
-      "学院": "百鬼夜行联合学园",
+      "学院": "百鬼夜行联合学院",
       "社团": "忍术研究部",
       "武器类型": "冲锋枪",
       "稀有度": "3",
