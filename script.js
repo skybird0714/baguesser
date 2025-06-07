@@ -73,7 +73,7 @@ const charactersData = {
       "name": "月雪 宫子",
       "intro_link": "https://kivo.wiki/data/character/6",
       "avatar_url": "https://static.kivo.wiki/images/students/月雪宫子/avatar.png",
-      "学院": "SRT特种学院",
+      "学院": "SRT特殊学院",
       "社团": "RABBIT小队",
       "武器类型": "冲锋枪",
       "稀有度": "3",
