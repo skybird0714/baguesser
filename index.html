@@ -25,6 +25,7 @@
             <!-- 模式选择 -->
             <div id="mode-selection" class="mode-selection">
                 <h2>请选择游戏模式</h2>
+                <p class="mode-tip">将鼠标悬停在模式上方以显示游戏介绍</p>
                 <div class="modes">
                     <div id="normal-mode" class="mode">
                         <h3>常规模式</h3>
@@ -36,6 +37,11 @@
                         <p>无限次尝试，看看你需要多少次才能猜对</p>
                         <div class="best-score">最佳成绩: <span id="infinite-best">--</span>次</div>
                     </div>
+                    <div id="challenge-mode" class="mode">
+                        <h3>挑战模式</h3>
+                        <p>根据提示猜出符合条件的角色，100秒内得分越高越好</p>
+                        <div class="best-score">最佳成绩: <span id="challenge-best">--</span>分</div>
+                    </div>
                 </div>
                 
                 <!-- 重置最佳成绩按钮 -->
@@ -44,9 +50,10 @@
                 <!-- 游戏介绍 -->
                 <div class="game-intro">
                     <h3 class="intro-title">如何游玩？</h3>
-                    <p class="intro-text">
-                        在上方选择一个模式，你需要猜一个蔚蓝档案游戏学生，当一个词条猜对时该词条显示<span class="text-green">绿色</span>，错误时是<span class="text-gray">灰色</span>，其中学院和社团合并，猜出正确的社团或学院任意一个显<span class="text-yellow">黄色</span>，全对才是<span class="text-green">绿色</span>，直到猜出具体人物为止，你可以放弃，更多详情请点击导航栏的使用说明（测试阶段，你可以在后台直接看到答案）
+                    <p class="intro-text" id="game-intro-text">
+                        你看到了这条消息，可能是script.js里你的DEBUG mode值不正确，正确的值应该是true或false。如果不是，请前往github issue进行反馈
                     </p>
+                    <p class="solver-link">无法解出？尝试解题器！<a href="https://github.com/skybird0714/baslover" target="_blank">前往GitHub</a></p>
                 </div>
             </div>
             
@@ -54,7 +61,11 @@
                 <div class="game-header">
                     <h2 id="game-mode-title">常规模式</h2>
                     <div class="attempts" id="attempts">剩余尝试: 6</div>
+                    <div class="timer" id="timer" style="display: none;">剩余时间: 100秒</div>
+                    <div class="score" id="score" style="display: none;">得分: 0</div>
                     <button class="give-up-btn" id="give-up-btn">放弃</button>
+                    <button class="skip-btn" id="skip-btn" style="display: none;">跳过</button>
+                    <button class="start-btn" id="start-btn">开始游戏</button>
                 </div>
                 
                 <div class="search-area">

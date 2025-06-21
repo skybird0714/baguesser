@@ -771,4 +771,155 @@ body {
     .intro-text {
         font-size: 14px;
     }
+}
+
+/* 添加计时器和得分显示的样式 */
+.timer, .score {
+    background: rgba(240, 240, 245, 0.8);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.timer.warning {
+    background: rgba(255, 200, 0, 0.3);
+    color: #d63031;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* 跳过按钮样式 */
+.skip-btn {
+    background: rgba(240, 240, 245, 0.8);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skip-btn:hover {
+    background: rgba(220, 220, 230, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 开始游戏按钮样式 */
+.start-btn {
+    background: rgba(46, 213, 115, 0.8);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.start-btn:hover {
+    background: rgba(46, 213, 115, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 解题器链接样式 */
+.solver-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.solver-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.solver-link a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* 提示卡片样式 */
+.hint-card {
+    background: rgba(240, 240, 245, 0.8);
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+.hint-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hint-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hint-item {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 模式介绍动画 */
+.intro-text {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.intro-text.changing {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .timer, .score, .skip-btn, .start-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    
+    .hint-card {
+        padding: 14px;
+    }
+    
+    .hint-title {
+        font-size: 16px;
+    }
+    
+    .hint-item {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}
+
+.mode-tip {
+    font-size: 14px;
+    color: rgba(80, 80, 80, 0.8);
+    margin-bottom: 20px;
+    font-style: italic;
 } 
