@@ -2529,6 +2529,9 @@ function returnToMenu() {
         
         // 重新加载最佳成绩
         loadBestScores();
+        
+        // 修复bug：重置游戏状态中的isGameStarted标志
+        gameState.isGameStarted = false;
     }, 300);
 }
 
@@ -2631,6 +2634,9 @@ function startChallenge() {
     
     // 设置游戏已开始标志
     gameState.isGameStarted = true;
+    
+    // 添加调试日志，帮助跟踪isGameStarted状态
+    console.log("挑战模式已开始，isGameStarted =", gameState.isGameStarted);
     
     // 启用搜索框
     characterSearch.disabled = false;
@@ -2937,6 +2943,9 @@ function checkChallengeGuess(character) {
 
 // 修改makeGuess函数，添加挑战模式支持
 function makeGuess(character) {
+    // 添加调试日志，显示当前状态
+    console.log("尝试选择角色:", character.name, "当前模式:", gameState.mode, "游戏已开始:", gameState.isGameStarted, "游戏已结束:", gameState.gameOver);
+    
     // 如果游戏已结束或未开始，不处理猜测
     if (gameState.gameOver || !gameState.isGameStarted) return;
     
