@@ -1354,6 +1354,20 @@ const charactersData = {
       "职能定位": "输出",
       "限定": "否"
     },
+    "115": {
+      "name": "羽沼 真琴",
+      "intro_link": "https://kivo.wiki/data/character/115",
+      "avatar_url": "https://static.kivo.wiki/images/students/羽沼%20真琴/avatar.png",
+      "学院": "歌赫娜学院",
+      "社团": "万魔殿",
+      "武器类型": "狙击枪",
+      "稀有度": "3",
+      "攻击类型": "贯穿",
+      "防御类型": "特殊装甲",
+      "站位": "SPECIAL",
+      "职能定位": "输出",
+      "限定": "是"
+    },
     "116": {
       "name": "鬼怒川 霞",
       "intro_link": "https://kivo.wiki/data/character/116",
@@ -1548,6 +1562,20 @@ const charactersData = {
       "防御类型": "重装甲",
       "站位": "SPECIAL",
       "职能定位": "输出",
+      "限定": "否"
+    },
+    "136": {
+      "name": "丹花 伊吹",
+      "intro_link": "https://kivo.wiki/data/character/136",
+      "avatar_url": "https://static.kivo.wiki/images/students/丹花%20伊吹/avatar.png",
+      "学院": "歌赫娜学院",
+      "社团": "万魔殿",
+      "武器类型": "突击步枪",
+      "稀有度": "3",
+      "攻击类型": "神秘",
+      "防御类型": "重装甲",
+      "站位": "中排",
+      "职能定位": "辅助",
       "限定": "否"
     },
     "137": {
@@ -2082,6 +2110,20 @@ const charactersData = {
       "职能定位": "输出",
       "限定": "否"
     },
+    "227": {
+      "name": "间宵 时雨（温泉）",
+      "intro_link": "https://kivo.wiki/data/character/227",
+      "avatar_url": "https://static.kivo.wiki/images/students/%E9%97%B4%E5%AE%B5%20%E6%97%B6%E9%9B%A8/%E6%B8%A9%E6%B3%89/avatar.png",
+      "学院": "红冬联邦学院",
+      "社团": "227号特别班",
+      "武器类型": "榴弹发射器",
+      "稀有度": "3",
+      "攻击类型": "贯穿",
+      "防御类型": "特殊装甲",
+      "站位": "SPECIAL",
+      "职能定位": "治疗",
+      "限定": "是"
+    },
     "228": {
       "name": "白洲 梓（泳装）",
       "intro_link": "https://kivo.wiki/data/character/228",
@@ -2250,6 +2292,62 @@ const charactersData = {
       "职能定位": "辅助",
       "限定": "是"
     },
+    "318": {
+      "name": "勘解由小路 紫",
+      "intro_link": "https://kivo.wiki/data/character/318",
+      "avatar_url": "https://static.kivo.wiki/images/students/%E5%8B%98%E8%A7%A3%E7%94%B1%E5%B0%8F%E8%B7%AF%20%E7%B4%AB/avatar.png",
+      "学院": "百鬼夜行联合学院",
+      "社团": "百花缭乱纠纷调解委员会",
+      "武器类型": "狙击枪",
+      "稀有度": "3",
+      "攻击类型": "振动",
+      "防御类型": "重装甲",
+      "站位": "后排",
+      "职能定位": "输出",
+      "限定": "否"
+    },
+    "319": {
+      "name": "不破 莲华",
+      "intro_link": "https://kivo.wiki/data/character/319",
+      "avatar_url": "https://static.kivo.wiki/images/students/%E4%B8%8D%E7%A0%B4%20%E8%8E%B2%E5%8D%8E/avatar.png",
+      "学院": "百鬼夜行联合学院",
+      "社团": "百花缭乱纠纷调解委员会",
+      "武器类型": "狙击枪",
+      "稀有度": "3",
+      "攻击类型": "振动",
+      "防御类型": "重装甲",
+      "站位": "后排",
+      "职能定位": "输出",
+      "限定": "否"
+    },
+    "320": {
+      "name": "桐生 桔梗",
+      "intro_link": "https://kivo.wiki/data/character/320",
+      "avatar_url": "https://static.kivo.wiki/images/students/%E6%A1%90%E7%94%9F%20%E6%A1%94%E6%A2%97/avatar.png",
+      "学院": "百鬼夜行联合学院",
+      "社团": "百花缭乱纠纷调解委员会",
+      "武器类型": "狙击枪",
+      "稀有度": "3",
+      "攻击类型": "振动",
+      "防御类型": "重装甲",
+      "站位": "后排",
+      "职能定位": "辅助",
+      "限定": "否"
+    },
+    "334": {
+      "name": "和泉元 艾米（泳装）",
+      "intro_link": "https://kivo.wiki/data/character/334",
+      "avatar_url": "https://static.kivo.wiki/images/students/和泉元%20艾米/泳装/avatar.png",
+      "学院": "千禧年科技学院",
+      "社团": "超自然现象调查部",
+      "武器类型": "霰弹枪",
+      "稀有度": "3",
+      "攻击类型": "神秘",
+      "防御类型": "特殊装甲",
+      "站位": "SPECIAL",
+      "职能定位": "辅助",
+      "限定": "否"
+    },
     "340": {
       "name": "小钩 晴（露营）",
       "intro_link": "https://kivo.wiki/data/character/340",
@@ -2277,7 +2375,35 @@ const charactersData = {
       "站位": "中排",
       "职能定位": "辅助",
       "限定": "否"
-    }
+    },
+    "345": {
+      "name": "天雨 亚子（礼服）",
+      "intro_link": "https://kivo.wiki/data/character/345",
+      "avatar_url": "https://static.kivo.wiki/images/students/%E5%A4%A9%E9%9B%A8%20%E4%BA%9A%E5%AD%90/%E7%A4%BC%E6%9C%8D/avatar.png",
+      "学院": "歌赫娜学院",
+      "社团": "风纪委员会",
+      "武器类型": "手枪",
+      "稀有度": "3",
+      "攻击类型": "贯穿",
+      "防御类型": "特殊装甲",
+      "站位": "中排",
+      "职能定位": "辅助",
+      "限定": "是"
+    },
+    "346": {
+      "name": "空崎 日奈（礼服）",
+      "intro_link": "https://kivo.wiki/data/character/346",
+      "avatar_url": "https://static.kivo.wiki/images/students/%E7%A9%BA%E5%B4%8E%20%E6%97%A5%E5%A5%88/%E7%A4%BC%E6%9C%8D/avatar.png",
+      "学院": "歌赫娜学院",
+      "社团": "风纪委员会",
+      "武器类型": "重机枪",
+      "稀有度": "3",
+      "攻击类型": "爆发",
+      "防御类型": "弹性装甲",
+      "站位": "后排",
+      "职能定位": "输出",
+      "限定": "是"
+    },
   };
 
 // 将对象转换为数组格式
@@ -3371,7 +3497,10 @@ function generateSimplePinyin(text) {
         "野": "ye", "钩": "gou", "铃": "ling", "银": "yin", "锭": "ding", "镜": "jing", "间": "jian", 
         "阿": "a", "陆": "lu", "雨": "yu", "雪": "xue", "霞": "xia", "露": "lu", "静": "jing", "鞠": "ju", 
         "音": "yin", "颜": "yan", "风": "feng", "飞": "fei", "馆": "guan", "香": "xiang", "马": "ma", 
-        "骑": "qi", "鬼": "gui", "魔": "mo", "鳄": "e", "鸟": "niao", "鹤": "he", "鹫": "jiu", "黄": "huang", "黑": "hei"
+        "骑": "qi", "鬼": "gui", "魔": "mo", "鳄": "e", "鸟": "niao", "鹤": "he", "鹫": "jiu", "黄": "huang", "黑": "hei",
+        "紫": "zi","华": "hua", "桔": "jie", "梗": "geng", "勘": "kan", "解": "jie", "由": "you", "路": "lu", 
+        "不": "bu", "破": "po",  "礼": "li", "服": "fu", "羽": "yu", "沼": "zhao", "琴": "qin",
+        "丹": "dan", "吹": "chui",
     };
     
     // 将汉字转换为拼音
